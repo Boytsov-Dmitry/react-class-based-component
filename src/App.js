@@ -9,8 +9,7 @@ const item = {
   currency: '£'
 }
 
-const ShopItemClass = ({item}) => {
-  const {brand, title, description, descriptionFull, price, currency} = item;
+const ShopItemClass = ({brand, title, description, descriptionFull, price, currency}) => {
   return (
   <div className="main-content">
     <h2>{brand}</h2>
@@ -38,7 +37,7 @@ function App() {
         <div className='highlight-overlay'></div>
       </div>
       <div className="window">
-        <ShopItemClass item={item} />
+        <ShopItemClass {...item} />
       </div>
     </div>
   );
